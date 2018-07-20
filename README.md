@@ -3,7 +3,7 @@ Pyro-C++ Textbook
 
 # Author List
 * William Kerney - Primary Author
-* Wes Jow - Project Administrator and Contributor (33 submissions)
+* Wes Jow - Project Administrator and Contributor (35 submissions)
 * Kobe Jones - Website Design
 * Omar Radwan - Contributor (34 submissions)
 * Chris Mendonca - Contributor (23 submissions)
