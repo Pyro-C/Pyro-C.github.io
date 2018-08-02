@@ -1,5 +1,5 @@
 # Pyro-C.github.io
-Pyro-C++ Textbook
+This repository is for the Pyro C++ textbook, [available online](pyro-c.com).
 
 # Author List
 * William Kerney - Primary Author
@@ -13,4 +13,3 @@ Pyro-C++ Textbook
 * Aimen Altaiyeb - Contributor (8 submissions)
 * Andrew Valenzuela - Contributor (6 submissions)
 * Yasmeen Maklani - Contributor (2 submissions)
-
