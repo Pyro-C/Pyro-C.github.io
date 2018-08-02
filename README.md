@@ -5,7 +5,9 @@ This repository is for the Pyro C++ textbook, [available online](pyro-c.com).
 * William Kerney
     * Primary Author
 * Wes Jow — https://github.com/MarxSoul55
-    * Project Administrator and Contributor (35 submissions)
+    * Co-author (written chapters + 35 submissions)
+    * Project/Repository Administrator
+    * Website Design
 * Kobe Jones
     * Website Design
 * Omar Radwan
