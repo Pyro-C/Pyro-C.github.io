@@ -60,3 +60,5 @@ have to use square brackets like so: `[index]`.
     cout << my_vector[2] << endl;
     // The above code will print out `8` and then `42`.
 You can use indices to remove elements from a vector. TODO finish this part
+also talk about adding into middle of vector or beginning
+also ask quiz question about efficiency of removing from beginning vs last of vector
