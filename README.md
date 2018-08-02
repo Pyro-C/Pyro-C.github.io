@@ -1,5 +1,5 @@
 # Pyro-C.github.io
-This repository is for the Pyro C++ textbook, [available online](pyro-c.com).
+This repository is for the Pyro C++ textbook, [available online](Pyro-C.github.io).
 
 # Author List
 * William Kerney
