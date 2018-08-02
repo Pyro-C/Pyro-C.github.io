@@ -1,5 +1,5 @@
 # Chapter 4: Vectors
-## **4.1 - The Basics**
+## 4.1 - The Basics
 The vector is one of the simplest data structures in C++, but its usefulness knows no bounds. You
 can think about vectors as a list of elements of some datatype. Let's dive right in with an
 example!
@@ -29,9 +29,7 @@ brevity's sake, we won't be typing this boiler plate code in future examples:
         // A bunch of code.
         return 0;
     }
-Assume that all code is written in `main` unless stated otherwise.
-
-Now, let's get back to vectors.
+Assume that all code is written in `main` unless stated otherwise. Now, let's get back to vectors.
 
     vector<int> my_vector;
 We just declared this vector, but we added nothing to it. Therefore, its size must be zero.
