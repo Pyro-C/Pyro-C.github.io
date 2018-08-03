@@ -48,9 +48,9 @@ Let's try adding an integer to the vector. We have to use `.push_back(something)
     my_vector.push_back(22);
     my_vector.push_back(8);
     my_vector.push_back(42);
-Every item in a vector is given an *index*. You can think of indices (plural for "index") as
-"page numbers". Indices keep track of the order of elements in a vector. In order to use them, we
-have to use square brackets like so: `[index]`.
+Every item in a vector is given an *index*. You can think of indices (plural for "index") as kinda
+like "page numbers". Indices keep track of the order of elements in a vector. In order to use them,
+we have to use square brackets like so: `[index]`.
 
     // Indices start at 0, and increase by 1 for every element added afterwards.
     int first_element = my_vector[0];
