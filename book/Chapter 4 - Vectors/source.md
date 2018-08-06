@@ -53,14 +53,14 @@ Alternatively, you could also use the following syntax with braces `{}`:
     my_vector = {22, 8, 42};
 Every item in a vector is given an *index*. You can think of indices (plural for "index") as kinda
 like "page numbers". Indices keep track of the order of elements in a vector. In order to use them,
-we have to use square brackets like so: `[index]`.
+we have to use `.at(index)`.
 
     // Indices start at 0, and increase by 1 for every element added afterwards.
-    int first_element = my_vector[0];
+    int first_element = my_vector.at(0);
     cout << first_element << endl;
     // The above code will print out `22` to the screen, since that was the first thing added.
-    cout << my_vector[1] << endl;
-    cout << my_vector[2] << endl;
+    cout << my_vector.at(1) << endl;
+    cout << my_vector.at(2) << endl;
     // The above code will print out `8` and then `42`.
 You can use indices to remove elements from a vector. The syntax is as follows:
 
@@ -91,13 +91,13 @@ With *strings*:
     vector<string> vec;
     vec.push_back("hello world");
     // Prints out `hello world`.
-    cout << vec[0] << endl;
+    cout << vec.at(0) << endl;
 With *floats*:
 
     vector<float> vec;
     vec.push_back(3.14);
     // Prints out `Pi is approximately 3.14`.
-    cout << "Pi is approximately: " << vec[0] << endl;
+    cout << "Pi is approximately: " << vec.at(0) << endl;
 With *booleans*:
 
     vector<bool> vec;
@@ -117,9 +117,9 @@ You can even make vectors out of vectors!
     groceries.push_back(produce);
     groceries.push_back(dairy);
     // Adding `apples` to the first vector in `groceries`, which is `produce`.
-    groceries[0].push_back("apples");
+    groceries.at(0).push_back("apples");
     // Prints out the first element of the first vector: `apples`
-    cout << groceries[0][0] << endl;
+    cout << groceries.at(0).at(0) << endl;
     // Prints out `2` since there are two vectors inside of `groceries`.
     cout << groceries.size() << endl;
 ### 4.3 - Range Based `for` Loops
