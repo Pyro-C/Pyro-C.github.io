@@ -1,5 +1,5 @@
 # Chapter 4: Vectors
-## 4.1 - Basic Vector Operations
+### 4.1 - Basic Vector Operations
 The *vector* is one of the simplest data structures in C++, but its usefulness knows no bounds. You
 can think about vectors as a list of elements of some datatype. Let's dive right in with an
 example!
@@ -48,6 +48,9 @@ Let's try adding an integer to the vector. We have to use `.push_back(something)
     my_vector.push_back(22);
     my_vector.push_back(8);
     my_vector.push_back(42);
+Alternatively, you could also use the following syntax with braces `{}`:
+
+    my_vector = {22, 8, 42};
 Every item in a vector is given an *index*. You can think of indices (plural for "index") as kinda
 like "page numbers". Indices keep track of the order of elements in a vector. In order to use them,
 we have to use square brackets like so: `[index]`.
@@ -78,7 +81,7 @@ which means that the new element in that index is `42`. Let's remove that and th
     my_vector.erase(my_vector.begin() + 1)
     my_vector.erase(my_vector.begin() + 0)  // The `+ 0` is optional.
     cout << my_vector.size() << endl;  // This will print `0` since everything's gone now.
-## 4.2 - Vectors w/ Other Datatypes
+### 4.2 - Vectors w/ Other Datatypes
 Everything we talked about in `4.1` is relevant to other datatypes as well! Nothing fundamentally
 changes when operating with other datatypes. Here, we present some code snippets of vectors holding
 commonly-used datatypes. We do some of the same operations we talked about in `4.1`.
@@ -113,12 +116,44 @@ You can even make vectors out of vectors!
     vector<string> dairy;
     groceries.push_back(produce);
     groceries.push_back(dairy);
+    // Adding `apples` to the first vector in `groceries`, which is `produce`.
     groceries[0].push_back("apples");
     // Prints out the first element of the first vector: `apples`
     cout << groceries[0][0] << endl;
     // Prints out `2` since there are two vectors inside of `groceries`.
     cout << groceries.size() << endl;
-## 4.3 - Vector Initialization & Looping
+### 4.3 - Range Based `for` Loops
+You can use indices to loop through vectors. Let's say you have a vector:
+
+    vector<string> fruits = {"apple", "banana", "cherry", "peach", "strawberry"};
+The following code will print every element in `fruits`:
+
+    for (int i = 0; i < fruits.size(); i++) {
+        cout << fruits[i] << endl;
+    }
+This is a typical `for` loop like the one we learned about in the last chapter, but there's also
+another way you can loop through the elements of a vector—a special kind of `for` loop called a
+"range-based `for` loop". Let's check out the syntax:
+
+    // Here `fruit` is just a placeholder variable that will be filled in with each element.
+    // You could replace `fruit` with any name!
+    // `fruits` is the name of the vector from which we are getting each element.
+    for (string fruit : fruits) {
+        cout << fruit << endl;
+    }
+When looping through elements of a vector, we recommend using this type of `for` loop. This loop is
+much simpler than the previous one, and it avoids having to keep track of indices. It's also much
+more readable!
+
+Let's see one more example:
+
+    vector<int> vec;
+    vec = {1, 2, 3, 4, 5};
+    cout << "Let's count to five!" << endl;
+    for (int number : vec) {
+        cout << number << endl;
+    }
+### 4.4 - Sorting Vectors
 TODO
 
 TODO finish this part
