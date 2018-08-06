@@ -150,8 +150,8 @@ Let's see one more example:
     vector<int> vec;
     vec = {1, 2, 3, 4, 5};
     cout << "Let's count to five!" << endl;
-    for (int number : vec) {
-        cout << number << endl;
+    for (int the_number : vec) {
+        cout << the_number << endl;
     }
 ### 4.4 - Sorting Vectors
 TODO
