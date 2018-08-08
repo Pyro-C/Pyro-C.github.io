@@ -104,4 +104,107 @@ first case:
     ((!x) && (y == 10)) || (z == 10)
 With the extra parentheses enclosing the first expression completely, it's much more clear that
 this expression is being evaluated *before* comparing it to the rightmost expression.
-### 3.3 - The `for` Loop
+### 3.3 - The `do while` Loop
+The `do while` loop is almost identical to the `while` loop.
+
+The only difference is the *order* in which the the code operates.
+
+For a `while` loop, the condition is checked; if it's true, the code in the block executes. For a
+`do while` loop, the code in the block executes, and *then* the condition is checked.
+
+Let's see an example to solidify this:
+
+    int n = 0;
+    // Check the condition. Is `n` less than `5`? If not, then don't execute the code.
+    while (n < 5) {
+        // Now execute the code.
+        n++;
+    }
+    cout << n << endl;
+This prints out `5` as expected. Now with `do while`:
+
+    int n = 0;
+    do {
+        // Execute the code.
+        n++;
+        // Now check the condition. If it's `false`, then stop the loop.
+    } while (n < 5);  // Don't forget this semicolon!
+    cout << n << endl;
+This also prints out `5`, just under a different order of operations!
+### 3.4 - The `for` Loop
+In English, the `for` loop could be written as follows:
+
+    for some N amount of times
+        do this
+In C++, we express this as follows:
+
+    for (int i = 0; i < 10; i++) {
+        cout << "Hello World!" << endl;
+    }
+This code will print `Hello World!` 10 times.
+
+`for` loops in C++ work by keeping track of an integer, in this case `i`, in order to repeat
+computation for a set amount of times. Let's see how this works by breaking apart the previous
+example:
+
+    int i = 0; i < 10; i++
+The first part of the expression declares the integer that will be used to keep track of the
+repeated computation. We set it equal to `0`.
+
+The next part declares a condition—so long as that condition is `true`, the code inside of the
+`for` loop will execute. Once it's no longer `true`, the `for` loop stops.
+
+The last part controls how the integer changes after each execution of the inside of the `for`
+loop. The `++` indicates that we increment it by `1`.
+
+Let's see this in action once more with a different example:
+
+    for (int a = 0; a < 2; a++) {
+        cout << a << endl;
+    }
+What do you think this code will do?
+
+This code prints out the controlling integer `a` out until the loop terminates.
+
+At the first iteration, `a` is simply `0` as it was initialized. So `0` is printed to the screen.
+Now C++ increments `a` by `1`.
+
+Now that the first iteration is over, C++ checks to ensure that `a` is still less than `2`. It is,
+so the second iteration begins. `a` was incremented after the last iteration, so now it's `1`. So
+`1` is printed to the screen. Now C++ increments `a` once more.
+
+Now `a` is `2`. Will C++ run through the loop again? No, since it fails the condition.
+
+In summary, the code will print the following to the screen:
+
+    0
+    1
+Let's play around a little with the `for` loop. Instead of counting up, let's try counting down!
+
+    for (int i = 5; i > 0; i--) {
+        cout << i << endl;
+    }
+What do you think this code will print out? Note that `--` is the opposite of `++`; instead of
+incrementing by one, it *decrements* by one.
+
+This code prints out the following to the screen:
+
+    5
+    4
+    3
+    2
+    1
+You can tinker around with `for` loops even further; we could count up by 2s!
+
+    // Note that `i += 2` is equivalent to `i = i + 2`. We're incrementing `i` by `2`.
+    for (int i = 2; i < 10; i += 2) {
+        cout << i << endl;
+    }
+    cout << "Who do we appreciate?" << endl;
+This code will print out:
+
+    2
+    4
+    6
+    8
+    Who do we appreciate?
