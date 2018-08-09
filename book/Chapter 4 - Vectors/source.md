@@ -1,5 +1,5 @@
 # Chapter 4: Vectors
-### 4.1 - Basic Vector Operations
+## 4.1 - Basic Vector Operations
 The *vector* is one of the simplest data structures in C++, but its usefulness knows no bounds. You
 can think about vectors as a list of elements of some datatype. Let's dive right in with an
 example!
@@ -81,7 +81,7 @@ which means that the new element in that index is `42`. Let's remove that and th
     my_vector.erase(my_vector.begin() + 1)
     my_vector.erase(my_vector.begin() + 0)  // The `+ 0` is optional.
     cout << my_vector.size() << endl;  // This will print `0` since everything's gone now.
-### 4.2 - Vectors w/ Other Datatypes
+## 4.2 - Vectors w/ Other Datatypes
 Everything we talked about in `4.1` is relevant to other datatypes as well! Nothing fundamentally
 changes when operating with other datatypes. Here, we present some code snippets of vectors holding
 commonly-used datatypes. We do some of the same operations we talked about in `4.1`.
@@ -122,7 +122,7 @@ You can even make vectors out of vectors!
     cout << groceries.at(0).at(0) << endl;
     // Prints out `2` since there are two vectors inside of `groceries`.
     cout << groceries.size() << endl;
-### 4.3 - Range Based `for` Loops
+## 4.3 - Range Based `for` Loops
 You can use indices to loop through vectors. Let's say you have a vector:
 
     vector<string> fruits = {"apple", "banana", "cherry", "peach", "strawberry"};
@@ -153,7 +153,7 @@ Let's see one more example:
     for (int the_number : vec) {
         cout << the_number << endl;
     }
-### 4.4 - Sorting Vectors
+## 4.4 - Sorting Vectors
 TODO
 
 TODO finish this part
