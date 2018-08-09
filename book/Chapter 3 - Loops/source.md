@@ -1,5 +1,5 @@
 # Chapter 3: Loops
-### 3.1 - Intuition
+## 3.1 - Intuition
 Many times in programming, we want to be able to do something repeatedly. One way to do this is to,
 quite literally, copy-paste a piece of code multiple times. Obviously, this is not ideal. In some
 cases, we may want to repeat something indefinitely, in which case it's impossible to use the naive
@@ -7,7 +7,7 @@ copy-paste method.
 
 In this chapter, we'll explore a concept called "loops". Loops allow us to express repeated
 computation in a compact way.
-### 3.2 - The `while` Loop
+## 3.2 - The `while` Loop
 `while` loops in English:
 
     while (expression is true)
@@ -104,7 +104,7 @@ first case:
     ((!x) && (y == 10)) || (z == 10)
 With the extra parentheses enclosing the first expression completely, it's much more clear that
 this expression is being evaluated *before* comparing it to the rightmost expression.
-### 3.3 - The `do while` Loop
+## 3.3 - The `do while` Loop
 The `do while` loop is almost identical to the `while` loop.
 
 The only difference is the *order* in which the the code operates.
@@ -131,7 +131,7 @@ This prints out `5` as expected. Now with `do while`:
     } while (n < 5);  // Don't forget this semicolon!
     cout << n << endl;
 This also prints out `5`, just under a different order of operations!
-### 3.4 - The `for` Loop
+## 3.4 - The `for` Loop
 In English, the `for` loop could be written as follows:
 
     for some N amount of times
@@ -208,3 +208,80 @@ This code will print out:
     6
     8
     Who do we appreciate?
+## 3.5 - The `break` Statement
+So far, we've shown how to facilitate repeated computation using loops. There's also a tool to stop
+that repeated computation before the loop is programmed to terminate—that's the `break` statement:
+
+    while (true) {
+        cout << "Howdy, partner!" << endl;
+        break;
+    }
+Here, the loop would normally print `Howdy, partner!` infinitely. However, we added a `break`
+statement, which essentially tells C++ to immediately stop the loop and exit out of it. Therefore,
+this code will only print `Howdy, partner!` once.
+
+Let's see an example with a `for` loop:
+
+    cout << "It's the final countdown" << endl;
+    for (int i = 10; i > 0; i--) {
+        cout << i << endl;
+        break;
+    }
+    cout << "It's the final countdown, yeah" << endl;
+Does the final countdown complete?
+
+If you answered "no", you're correct! The `break` statement works exactly the same as with the
+`while` loop. Once C++ sees `break`, the loop is immediately terminated, and the computer moves on
+to the next line of code. This code will print:
+
+    It's the final countdown
+    10
+    It's the final countdown, yeah
+## 3.Q - Questions
+Here, you can test your knowledge of what you've learned up to this point!
+***
+QUESTION 1: What will the following block of code do?
+
+    cout << "Enter an integer: ";
+    int num;
+    cin >> num;
+    for (int i = 0; i <= num; i++) {
+        if (i % 2) {
+            cout << i << " is odd!\n"; 
+        }
+        else {
+            cout << i << " is even!\n";
+        }
+    }
+ANSWER: Prints out the even and odd numbers starting from 0 to the number entered by the user.
+***
+QUESTION 2: How should this code be changed to run 10 times?
+
+    for (int i = 0; i < 5; i++) {
+        cout << "Hello World!" << endl;
+    }
+ANSWER: Change the `i < 5` to be `i < 10`.
+
+    for (int i = 0; i < 10; i++) {
+        cout << "Hello World!" << endl;
+    }
+***
+QUESTION 3: This `for` loop is bugged. What's wrong with it?
+
+    for (int i = 0, i < 10, i++) {
+        cout << i + 1 << endl;
+    }
+ANSWER: Commas cannot be used to separate the synatical elements of the `for` loop. You must use
+semicolons.
+***
+QUESTION 4: Change this code so that it counts down from 42 all the way to, *and including*, 13.
+
+    for (int i = 100; i < 56; i--) {
+        cout << i << endl;
+    }
+ANSWER: Change the first and second synatic elements of the `for` loop accordingly.
+
+    for (int i = 42; i >= 13; i--) {
+        cout << i << endl;
+    }
+***
