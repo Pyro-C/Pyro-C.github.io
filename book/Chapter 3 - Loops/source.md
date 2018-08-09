@@ -151,7 +151,7 @@ example:
 The first part of the expression declares the integer that will be used to keep track of the
 repeated computation. We set it equal to `0`.
 
-The next part declares a condition—so long as that condition is `true`, the code inside of the
+The next part declares a condition; so long as that condition is `true`, the code inside of the
 `for` loop will execute. Once it's no longer `true`, the `for` loop stops.
 
 The last part controls how the integer changes after each execution of the inside of the `for`
@@ -210,7 +210,7 @@ This code will print out:
     Who do we appreciate?
 ## 3.5 - The `break` Statement
 So far, we've shown how to facilitate repeated computation using loops. There's also a tool to stop
-that repeated computation before the loop is programmed to terminate—that's the `break` statement:
+that repeated computation before the loop is programmed to terminate; that's the `break` statement:
 
     while (true) {
         cout << "Howdy, partner!" << endl;

@@ -132,7 +132,7 @@ The following code will print every element in `fruits`:
         cout << fruits[i] << endl;
     }
 This is a typical `for` loop like the one we learned about in the last chapter, but there's also
-another way you can loop through the elements of a vector—a special kind of `for` loop called a
+another way you can loop through the elements of a vector; a special kind of `for` loop called a
 "range-based `for` loop". Let's check out the syntax:
 
     // Here `fruit` is just a placeholder variable that will be filled in with each element.
