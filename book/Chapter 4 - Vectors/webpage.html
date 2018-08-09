@@ -1,5 +1,5 @@
 <h1 id="chapter4vectors">Chapter 4: Vectors</h1>
-<h3 id="41basicvectoroperations">4.1 - Basic Vector Operations</h3>
+<h2 id="41basicvectoroperations">4.1 - Basic Vector Operations</h2>
 <p>The <em>vector</em> is one of the simplest data structures in C++, but its usefulness knows no bounds. You
 can think about vectors as a list of elements of some datatype. Let's dive right in with an
 example!</p>
@@ -81,7 +81,7 @@ which means that the new element in that index is <code>42</code>. Let's remove 
 my_vector.erase(my_vector.begin() + 0)  // The `+ 0` is optional.
 cout &lt;&lt; my_vector.size() &lt;&lt; endl;  // This will print `0` since everything's gone now.
 </code></pre>
-<h3 id="42vectorswotherdatatypes">4.2 - Vectors w/ Other Datatypes</h3>
+<h2 id="42vectorswotherdatatypes">4.2 - Vectors w/ Other Datatypes</h2>
 <p>Everything we talked about in <code>4.1</code> is relevant to other datatypes as well! Nothing fundamentally
 changes when operating with other datatypes. Here, we present some code snippets of vectors holding
 commonly-used datatypes. We do some of the same operations we talked about in <code>4.1</code>.</p>
@@ -121,7 +121,7 @@ cout &lt;&lt; groceries.at(0).at(0) &lt;&lt; endl;
 // Prints out `2` since there are two vectors inside of `groceries`.
 cout &lt;&lt; groceries.size() &lt;&lt; endl;
 </code></pre>
-<h3 id="43rangebasedforloops">4.3 - Range Based <code>for</code> Loops</h3>
+<h2 id="43rangebasedforloops">4.3 - Range Based <code>for</code> Loops</h2>
 <p>You can use indices to loop through vectors. Let's say you have a vector:</p>
 <pre><code>vector&lt;string&gt; fruits = {"apple", "banana", "cherry", "peach", "strawberry"};
 </code></pre>
@@ -151,7 +151,7 @@ for (int the_number : vec) {
     cout &lt;&lt; the_number &lt;&lt; endl;
 }
 </code></pre>
-<h3 id="44sortingvectors">4.4 - Sorting Vectors</h3>
+<h2 id="44sortingvectors">4.4 - Sorting Vectors</h2>
 <p>TODO</p>
 <p>TODO finish this part
 also talk about adding into middle of vector or beginning
