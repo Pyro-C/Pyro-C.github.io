@@ -285,3 +285,5 @@ ANSWER: Change the first and second synatic elements of the `for` loop according
         cout << i << endl;
     }
 ***
+
+TODO: add more examples for `do while` section.
