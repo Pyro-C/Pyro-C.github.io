@@ -273,7 +273,7 @@ QUESTION 3: This `for` loop is bugged. What's wrong with it?
     for (int i = 0, i < 10, i++) {
         cout << i + 1 << endl;
     }
-ANSWER: Commas cannot be used to separate the synatical elements of the `for` loop. You must use
+ANSWER: Commas cannot be used to separate the syntactic elements of the `for` loop. You must use
 semicolons.
 ***
 QUESTION 4: Change this code so that it counts down from 42 all the way to, *and including*, 13.
@@ -281,11 +281,9 @@ QUESTION 4: Change this code so that it counts down from 42 all the way to, *and
     for (int i = 100; i < 56; i--) {
         cout << i << endl;
     }
-ANSWER: Change the first and second synatic elements of the `for` loop accordingly.
+ANSWER: Change the first and second syntactic elements of the `for` loop accordingly.
 
     for (int i = 42; i >= 13; i--) {
         cout << i << endl;
     }
 ***
-
-TODO: add more examples for `do while` section.
