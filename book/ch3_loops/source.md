@@ -1,5 +1,5 @@
 # Chapter 3: Loops
-## 3.1 - Intuition
+## [3.1 - Intuition](#3.1)
 Many times in programming, we want to be able to do something repeatedly. One way to do this is to,
 quite literally, copy-paste a piece of code multiple times. Obviously, this is not ideal. In some
 cases, we may want to repeat something indefinitely, in which case it's impossible to use the naive
@@ -7,7 +7,7 @@ copy-paste method.
 
 In this chapter, we'll explore a concept called "loops". Loops allow us to express repeated
 computation in a compact way.
-## 3.2 - The `while` Loop
+## [3.2 - The `while` Loop](#3.2)
 `while` loops in English:
 
     while (expression is true)
@@ -104,7 +104,7 @@ first case:
     ((!x) && (y == 10)) || (z == 10)
 With the extra parentheses enclosing the first expression completely, it's much more clear that
 this expression is being evaluated *before* comparing it to the rightmost expression.
-## 3.3 - The `do while` Loop
+## [3.3 - The `do while` Loop](#3.3)
 The `do while` loop is almost identical to the `while` loop.
 
 The only difference is the *order* in which the the code operates.
@@ -133,7 +133,7 @@ This prints out `0` as expected. Now with `do while`:
 This prints out `1`, unlike the plain `while` loop. You can see that the differing order of
 operations caused the code to behave differently, even though we started with the same variable `n`
 and the same expression `n != 0`.
-## 3.4 - The `for` Loop
+## [3.4 - The `for` Loop](#3.4)
 In English, the `for` loop could be written as follows:
 
     for some N amount of times
@@ -210,7 +210,7 @@ This code will print out:
     6
     8
     Who do we appreciate?
-## 3.5 - The `break` Statement
+## [3.5 - The `break` Statement](#3.5)
 So far, we've shown how to facilitate repeated computation using loops. There's also a tool to stop
 that repeated computation before the loop is programmed to terminate; that's the `break` statement:
 
@@ -239,7 +239,7 @@ to the next line of code. This code will print:
     It's the final countdown
     10
     It's the final countdown, yeah
-## 3.Q - Questions
+## [3.Q - Questions](#3.Q)
 Here, you can test your knowledge of what you've learned up to this point!
 ***
 QUESTION 1: What will the following block of code do?
