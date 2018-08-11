@@ -115,22 +115,24 @@ For a `while` loop, the condition is checked; if it's true, the code in the bloc
 Let's see an example to solidify this:
 
     int n = 0;
-    // Check the condition. Is `n` less than `5`? If not, then don't execute the code.
-    while (n < 5) {
+    // Check the condition. If the expression is `false`, then don't execute the code.
+    while (n != 0) {
         // Now execute the code.
         n++;
     }
     cout << n << endl;
-This prints out `5` as expected. Now with `do while`:
+This prints out `0` as expected. Now with `do while`:
 
     int n = 0;
+    // Execute the code right away. We're not checking the condition just yet.
     do {
-        // Execute the code.
         n++;
-        // Now check the condition. If it's `false`, then stop the loop.
-    } while (n < 5);  // Don't forget this semicolon!
+        // Now we check the condition. If it's `false`, then stop the loop.
+    } while (n != 0);  // Don't forget this semicolon!
     cout << n << endl;
-This also prints out `5`, just under a different order of operations!
+This prints out `1`, unlike the plain `while` loop. You can see that the differing order of
+operations caused the code to behave differently, even though we started with the same variable `n`
+and the same expression `n != 0`.
 ## 3.4 - The `for` Loop
 In English, the `for` loop could be written as follows:
 
