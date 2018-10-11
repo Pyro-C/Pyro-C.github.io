@@ -1,3 +1,4 @@
+**This project is currently under active development in a pre-release stage.**
 # Pyro-C.github.io
 This repository is for the Pyro C++ textbook, [available online](http://www.pyro-c.com).
 
