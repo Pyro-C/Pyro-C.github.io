@@ -154,11 +154,16 @@ Let's see one more example:
         cout << the_number << endl;
     }
 ## 4.4 - Sorting Vectors
-One of the most basic operations you can perform on a vector is sorting it from either smallest to
-biggest, or from biggest to smallest. Take the following vector as an example:
+One of the most fundamental operations you can perform on a vector is *sorting it* from either
+smallest to biggest or the other way around. In this section, we will implement and go over a
+handful of algorithms that you can use to sort vectors.
+
+We'll test each algorithm on the following vector:
 
     vector<int> vec = {42, 22, 64, 76, 16, 8, 99};
-We can try sorting this vector from smallest to biggest using an algorithm called *insertion sort*.
+## 4.4.1 - Insertion Sort
+Let's try sorting this vector from smallest to biggest using an algorithm called
+**insertion sort**.
 This is a very simple algorithm that we can implement using what we've taught so far:
 
     for (int i = 1; i < vec.size(); i++) {
