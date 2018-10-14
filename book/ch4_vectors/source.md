@@ -161,7 +161,26 @@ handful of algorithms that you can use to sort vectors.
 We'll test each algorithm on the following vector:
 
     vector<int> vec = {42, 22, 64, 76, 16, 8, 99};
-## 4.4.1 - Insertion Sort
+## 4.4.1 - Regarding Efficiency
+As we're now talking more about datastructures and algorithms that are performed on them, it's a
+good time to talk about time complexity.
+
+Mathematically, we can represent the performance of an algorithm with a notation called
+*Big O Notation*. This notation expresses how an algorithm's performance scales with its inputs.
+More specifically, it expresses the *worst case scenario*. What exactly does that mean? We'll talk
+about it for each sorting algorithm! For now, let's go over some basic definitions.
+
+If an algorithm always takes a constant amount of time to perform, regardless of the amount of
+inputs, we express that as: `O(1)`.
+
+If an algorithm scales linearly as the input grows, we express that as: `O(N)`.
+
+If an algorithm scales with the square of the input's size, we express that as: `O(N^2)`. The `^2`
+is supposed to represent a superscript.
+
+Don't worry if you don't understand this right now; we just want to introduce the concept, and
+we'll talk about it more throughout the book.
+## 4.4.2 - Insertion Sort
 Let's try sorting this vector from smallest to biggest using an algorithm called
 **insertion sort**.
 This is a very simple algorithm that we can implement using what we've taught so far:
@@ -255,7 +274,19 @@ Sure enough, we get:
     64
     76
     99
+So we've went over what insertion sort is... but why should we use it in the first place? Let's go
+over the pros and cons.
 
+Pros:
+* It's simple and easy to understand; trivial to implement.
+* It's memory-efficient because it can be performed without needing additional memory. 
+* It's online, which means it can sort a list as it receives it, one item at a time.
+* It's very fast for lists that are nearly sorted.
+
+Cons:
+* I
+## 4.4.3 - Selection Sort
+TODO
 
 TODO finish this part
 also talk about adding into middle of vector or beginning
