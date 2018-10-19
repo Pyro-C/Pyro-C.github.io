@@ -128,7 +128,7 @@ You can use indices to loop through vectors. Let's say you have a vector:
     vector<string> fruits = {"apple", "banana", "cherry", "peach", "strawberry"};
 The following code will print every element in `fruits`:
 
-    for (int i = 0; i < fruits.size(); i++) {
+    for (int i = 0; i < fruits.size(); ++i) {
         cout << fruits[i] << endl;
     }
 This is a typical `for` loop like the one we learned about in the last chapter, but there's also
@@ -155,8 +155,8 @@ Let's see one more example:
     }
 ## 4.4 - Sorting Vectors
 One of the most fundamental operations you can perform on a vector is *sorting it* from either
-smallest to biggest or the other way around. In this section, we will implement and go over a
-handful of algorithms that you can use to sort vectors.
+smallest to biggest or the other way around. In this section, we will implement and go over three
+algorithms—bubble sort, insertion sort, and merge sort.
 
 We'll test each algorithm on the following vector:
 
@@ -176,16 +176,94 @@ inputs, we express that as: `O(1)`.
 If an algorithm scales linearly as the input grows, we express that as: `O(N)`.
 
 If an algorithm scales with the square of the input's size, we express that as: `O(N^2)`. The `^2`
-is supposed to represent a superscript.
+represents a superscript.
 
 Don't worry if you don't understand this right now; we just want to introduce the concept, and
 we'll talk about it more throughout the book.
-## 4.4.2 - Insertion Sort
+## 4.4.2 - Bubble Sort
+**Bubble sort** is an extremely simple sorting algorithm. Here, we show code to sort from smallest
+to largest. Take a minute and try to figure out how it works:
+
+    int hits;
+    while (true) {
+        hits = 0;
+        for (int i = 0; i < (vec.size() - 1); ++i) {
+            if (vec.at(i) > vec.at(i + 1)) {
+                // We found a pair of numbers that wasn't sorted, so increment `hits`.
+                ++hits;
+                // Swap the values!
+                int backup_before_overwriting = vec.at(i + 1);
+                vec.at(i + 1) = vec.at(i);
+                vec.at(i) = backup_before_overwriting;
+            }
+        }
+        if (hits == 0) {
+            break;
+        }
+    }
+Now let's go over it! We start with these numbers:
+
+    42, 22, 64, 76, 16, 8, 99
+Starting at index `0`, we have a 42. At index `1`, we have 22. Is 42 > 22? Yes, so we swap them.
+Our new list is as follows:
+
+    22, 42, 64, 76, 16, 8, 99
+Now we start again at index `1`, where we have a 42. At index `2`, we have a 64. Is 42 > 64? No, so
+we keep the list the same:
+
+    22, 42, 64, 76, 16, 8, 99
+Is the value at index `2` > the value at index `3`? No, so the list is the same:
+
+    22, 42, 64, 76, 16, 8, 99
+Is the value at index `3` > the value at index `4`? Yes. So we swap them:
+
+    22, 42, 64, 16, 76, 8, 99
+...and so on. We're basically iterating through pairs of numbers and swapping them if they aren't
+in the correct order.
+
+After we've completed the *first iteration*, we have:
+
+    22, 42, 64, 16, 8, 76, 99
+You can see that the list isn't sorted yet. In order to sort it, we must repeatedly iterate through
+the numbers until we've reached a point where no two pairs of numbers are out of order, hence the
+`hits` variable and the `break` statement corresponding to it.
+
+If no two pairs of numbers are out of order, that means the list is sorted. That's bubble sort!
+
+So what are the pros and cons of bubble sort?
+
+Pros:
+* It's easy to understand and implement.
+
+Cons:
+* It is very slow for bigger lists.
+    * More formally, we note that it's time complexity is `O(N^2)`.
+
+Why is bubble sort's time complexity `O(N^2)`? Remember that *Big O Notation* expresses the
+*worst case scenario*. What's the worst case scenario for sorting from smallest to largest?
+That would be sorting a list of numbers that is *already sorted from largest to smallest*.
+
+Let's assume we have a list of three numbers from largest to smallest. How many iterations will
+bubble sort have to go through in order to get from smallest to largest?
+
+Let's look at an example to make things clearer:
+
+    3, 2, 1 (original)
+    2, 1, 3 (after 1st iteration of comparisons; 2 swaps done)
+    1, 2, 3 (after 2nd iteration of comparisons; 1 swap done)
+    1, 2, 3 (after 3rd iteration of comparisons; 0 swaps done, that means list is sorted, so exit)
+So with three numbers, we did three iterations through the list.
+
+So for a list with `N` elements, we can expect (in the worst case scenario) bubble sort to iterate
+over the list `N` times in order to do all the comparisons and swapping.
+Thus, bubble sort has a time complexity of `O(N^2)`.
+
+## 4.4.3 - Insertion Sort
 Let's try sorting this vector from smallest to biggest using an algorithm called
 **insertion sort**.
 This is a very simple algorithm that we can implement using what we've taught so far:
 
-    for (int i = 1; i < vec.size(); i++) {
+    for (int i = 1; i < vec.size(); ++i) {
         for (int j = i; j > 0; j--) {
             // If the current value is greater than the previous value...
             if (vec.at(j) < vec.at(j - 1)) {
@@ -278,15 +356,13 @@ So we've went over what insertion sort is... but why should we use it in the fir
 over the pros and cons.
 
 Pros:
-* It's simple and easy to understand; trivial to implement.
+* It's easy to understand and implement.
 * It's memory-efficient because it can be performed without needing additional memory. 
 * It's online, which means it can sort a list as it receives it, one item at a time.
 * It's very fast for lists that are nearly sorted.
 
 Cons:
 * I
-## 4.4.3 - Selection Sort
-TODO
 
 TODO finish this part
 also talk about adding into middle of vector or beginning
